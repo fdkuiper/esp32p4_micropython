@@ -187,6 +187,10 @@ soft_reset_exit:
     mp_usbd_deinit();
     #endif
 
+    #ifdef MICROPY_BOARD_DEINIT
+    MICROPY_BOARD_DEINIT();
+    #endif
+
     gc_sweep_all();
 
     // Free any native code pointers that point to iRAM.

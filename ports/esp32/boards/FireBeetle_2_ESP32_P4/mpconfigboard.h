@@ -2,12 +2,15 @@
 // specified.
 
 #ifndef MICROPY_HW_BOARD_NAME
-#define MICROPY_HW_BOARD_NAME "FireBeetle 2 ESP32 P4"
+#define MICROPY_HW_BOARD_NAME "FireBeetle 2 ESP32 P4 (camera fix)"
 #endif
 
 #ifndef MICROPY_HW_MCU_NAME
 #define MICROPY_HW_MCU_NAME "ESP32P4"
 #endif
+
+void camera_deinit_all(void);
+#define MICROPY_BOARD_DEINIT camera_deinit_all
 
 
 // not fixed in mpy 1.26.0
