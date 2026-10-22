@@ -16,3 +16,8 @@ dependencies:
   chmorgan/esp-file-iterator: 1.0.0
   ##espressif/led_strip: 3.0.0
   espressif/esp_lcd_ek79007: ^1.0.2
+
+The maintained camera module can include an OV9281 backport alongside OV5647.
+This board sets `MICROPY_CAMERA_OV9281 ON`; select the connected camera with
+`camera.init(sensor='OV9281', w=1280, h=720)` or use the existing OV5647 defaults.
+OV9281 requires a module providing a 24 MHz input clock and compatible CSI wiring.
